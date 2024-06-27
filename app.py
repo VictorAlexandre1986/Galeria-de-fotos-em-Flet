@@ -15,9 +15,9 @@ def main(page: ft.Page):
         e.control.style = btn_style_selected
 
         if e.control.text == 'Todas as fotos':
-            layout.controls[0] = grid2 
+            layout.controls[0] = grid1 
         else:
-            layout.controls[0] = grid1
+            layout.controls[0] = grid2
 
         layout.update()
 
@@ -79,7 +79,7 @@ def main(page: ft.Page):
 
     footer = ft.Container(
         bgcolor=ft.colors.BLACK54,
-        margin=ft.margin.symmetric(vertical=5, horizontal=10),
+        margin=ft.margin.symmetric(vertical=25, horizontal=10),
         padding=ft.padding.all(5),
         border_radius=ft.border_radius.all(50),
         content=ft.Row(
@@ -106,6 +106,10 @@ def main(page: ft.Page):
 
 
     page.add(layout)
+    page.title="Galeria de Fotos"
+    page.window_width = 500
+    page.window_height = 700
+    page.update()
    
 
 
